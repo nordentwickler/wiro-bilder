@@ -1,0 +1,16 @@
+
+@tailwind base;
+@tailwind components;
+
+
+@import "./generic/_layout.scss";
+@import "./generic/_typography.scss";
+
+@import "./components/_buttons.scss";
+@import "./components/_forms.scss";
+
+@import '~photoswipe/src/css/main';
+@import '~photoswipe/src/css/default-skin/default-skin';
+
+
+@tailwind utilities;

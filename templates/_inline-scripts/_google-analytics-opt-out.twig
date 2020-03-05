@@ -1,0 +1,16 @@
+{% if seomaticHelper is defined %}
+  {% if seomaticHelper.ownerGoogleAnalyticsUID is defined %}
+    <script type="text/javascript">
+      var gaProperty = {{ seomaticHelper.ownerGoogleAnalyticsUID }};
+      var disableStr = 'ga-disable-' + gaProperty;
+      if ( document.cookie.indexOf( disableStr + '=true' ) > -1 ) {
+        window[disableStr] = true;
+      }
+      window.gaOptout = function ( ) {
+        alert('Google Analytics Cookie wurde deaktiviert.')
+        document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+        window[disableStr] = true;
+      }
+    </script>
+  {% endif %}
+{% endif %}

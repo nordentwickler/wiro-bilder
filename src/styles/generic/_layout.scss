@@ -1,0 +1,35 @@
+/**
+ *
+ * Generic layout
+ *
+ */
+
+$scroll-factor : .5;
+
+/*
+
+#app{
+  height:100vh;
+  overflow-x: hidden;
+  overflow-y:auto;
+  perspective: 1px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
+}
+
+.intro{
+  height: 60vh;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  vertical-align: top;
+  transform-origin: center top;
+  transform:
+          translateZ(-#{$scroll-factor * 2}px)
+          scale(1 + $scroll-factor * 2);
+}
+
+#gallery{
+  transform: translateZ(0);
+}*/
+

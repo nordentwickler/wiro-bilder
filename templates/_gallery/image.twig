@@ -1,0 +1,37 @@
+
+
+{% set bigImage = {
+    mode: 'crop',
+    width: 1024,
+    quality: 80,
+    format: 'jpg'
+} %}
+
+{% set smallImage = {
+    mode: 'crop',
+    width: 320,
+    height: 213,
+    quality: 70,
+    format: 'jpg',
+    position: 'center-center'
+} %}
+
+{% set placeholder = {
+    mode: 'crop',
+    width: 320,
+    height: 213,
+    quality: 1,
+    format: 'jpg',
+    position: 'center-center'
+} %}
+
+<figure class="p-2 w-1/2 sm:w-1/3 lg:w-1/4 gallery-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <a href="{{ image.getUrl(bigImage) }}" itemprop="contentUrl" data-size="{{ image.getWidth(bigImage) }}x{{ image.getHeight(bigImage) }}" class="inline-block">
+        <img data-src="{{ image.getUrl(smallImage) }}" src="{{ image.getUrl(placeholder) }}" class="lazy" itemprop="thumbnail" alt="Image description"/>
+    </a>
+    <figcaption itemprop="caption description" class="hidden">
+        <div class="text-center text-base">
+            <a href="{{ image.getUrl }}" class="border-b border-white py-1 hover:opacity-75" download>Bild herunterladen</a>
+        </div>
+    </figcaption>
+</figure>

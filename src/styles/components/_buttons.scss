@@ -1,0 +1,18 @@
+/**
+ *
+ * Button component
+ *
+ */
+
+.btn{
+  @apply relative inline-flex items-center px-4 py-3 leading-5 font-semibold text-white bg-ihk-blue transition ease-in-out duration-150;
+  &:hover{
+    @apply bg-ihk-green;
+  }
+  &:focus{
+    @apply outline-none;
+  }
+  &:active{
+    @apply bg-ihk-green;
+  }
+}

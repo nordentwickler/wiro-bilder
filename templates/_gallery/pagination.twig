@@ -1,0 +1,39 @@
+{% if pageInfo.totalPages > 1 %}
+    <div class="fixed bottom-0 z-50 left-0 right-0 w-full bg-gray-100 border-t border-gray-300">
+        <div class="p-4 w-full shadow-xl">
+
+
+            <div class="container mx-auto">
+
+
+                <div class="flex items-center justify-between">
+                    <div class="hidden sm:block">
+                        <p class="text-lg leading-5 text-gray-700">
+                            Seite
+                            <span class="font-medium">{{ pageInfo.currentPage }}</span>
+                            von
+                            <span class="font-medium">{{ pageInfo.totalPages }}</span>
+                        </p>
+                    </div>
+                    <div class="flex-1 flex justify-between sm:justify-end">
+                        {% if pageInfo.prevUrl %}
+                            <a href="{{ pageInfo.prevUrl }}" class="btn text-lg">
+                                Vorherige Seite
+                            </a>
+                        {% endif %}
+
+
+                        {% if pageInfo.nextUrl %}
+                            <a href="{{ pageInfo.nextUrl }}" class="btn text-lg {% if pageInfo.prevUrl %}ml-3{% else %}ml-auto{% endif %}">
+                                Nächste Seite
+                            </a>
+                        {% else %}
+
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}

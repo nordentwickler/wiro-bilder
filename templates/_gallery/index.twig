@@ -1,0 +1,35 @@
+{### Extends #}
+{% extends '_layouts/master' %}
+
+{% block content %}
+
+{% set allImages = craft.entries.section(['bilderseiten']).limit(1) %}
+
+<section class="p-4 bg-white z-30 relative" id="gallery">
+    <div class="container mx-auto">
+
+
+
+        {% paginate allImages as pageInfo, imagePage %}
+
+
+        {% for entry in imagePage %}
+            <div class="gallery flex flex-wrap -mx-2" itemscope itemtype="http://schema.org/ImageGallery">
+                {% for image in entry.images.all %}
+
+                    {% include '_gallery/image.twig' with {'entry': 'image'}%}
+
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+
+
+
+
+    </div>
+</section>
+
+    {% include '_gallery/pagination.twig' %}
+
+{% endblock %}

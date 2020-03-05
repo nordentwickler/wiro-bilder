@@ -1,0 +1,28 @@
+/**
+ *
+ * Generic typography
+ *
+ */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap');
+
+$example-bg: #E79627;
+.webhub {
+  @apply text-white p-8 text-center font-bold;
+  background-color: $example-bg;
+}
+
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  @apply text-gray-700;
+}
+h1{
+  @apply text-2xl mb-4;
+  color:#2d76b2;
+}
+.lazy{
+  filter: blur(4px);
+  &.loaded{
+    filter:blur(0)
+  }
+}
