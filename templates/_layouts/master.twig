@@ -24,9 +24,6 @@
     {# Get Ya Style On! #}
     <link rel="stylesheet" href="{{ '/assets/css/app.css?id=f7f1fa14accef910f88b'|mix }}">
 
-    {# If exists include favicon meta#}
-    {% include '_favicon' ignore missing %}
-
     <link rel="home" href="{{ siteUrl }}"/>
 
     {# https://polyfill.io/v2/docs/ #}
@@ -67,11 +64,6 @@
 {# Cookie Warning #}
 {% include "_partials/_cookie-warning" ignore missing %}
 
-{# IE warning #}
-{% include "_inline-scripts/_ie-warning" %}
-
-{# Google Analytics opt out #}
-{% include "_inline-scripts/_google-analytics-opt-out" %}
 
 </body>
 </html>
