@@ -28,6 +28,9 @@
 # ASSETS
 scripts/**/*
 public/assets/css/**/*
+!public/assets/css/default-skin.png
+!public/assets/css/default-skin.svg
+!public/assets/css/preloader.gif
 public/assets/js/**/*
 public/web.config
 public/mix-manifest.json
