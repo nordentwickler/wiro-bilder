@@ -20,9 +20,11 @@ h1{
   @apply text-2xl mb-4;
   color:#2d76b2;
 }
+/* purgecss start ignore */
 .lazy{
   filter: blur(4px);
   &.loaded{
     filter:blur(0)
   }
 }
+/* purgecss end ignore */
