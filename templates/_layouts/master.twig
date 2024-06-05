@@ -29,6 +29,10 @@
     <link rel="home" href="{{ siteUrl }}"/>
 
     {# https://polyfill.io/v2/docs/ #}
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="BTLMAWRC" defer></script>
+    <!-- / Fathom -->
+
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 
 </head>
@@ -55,8 +59,8 @@
     {% include '_partials/footer.twig' %}
 </div>
 
-{# Craft CSRF token #}
-{% include "_inline-scripts/_craft-csrf-token" %}
+{# Craft CSRF token {% include "_inline-scripts/_craft-csrf-token" %}
+#}
 
 {# Application script #}
 <script src="{{ '/assets/js/manifest.js'|mix }}"></script>

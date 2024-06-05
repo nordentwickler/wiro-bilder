@@ -23,6 +23,9 @@ return [
         // The secure key Craft will use for hashing and encrypting data
         'securityKey' => getenv('SECURITY_KEY'),
 
+        'enableCsrfProtection' => false,
+
+
     ],
 
     // Dev environment settings
