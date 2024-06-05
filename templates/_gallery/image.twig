@@ -35,7 +35,7 @@
     {% if allowDownload %}
     <figcaption itemprop="caption description" class="hidden">
         <div class="text-center text-base">
-            <a href="{{ image.getUrl }}" class="border-b border-white py-1 hover:opacity-75" download>Bild herunterladen</a>
+            <a href="{{ image.getUrl }}" onclick="fathom.trackEvent('Download: {{ image.title }}');" class="image-link border-b border-white py-1 hover:opacity-75" download>Bild herunterladen</a>
         </div>
     </figcaption>
     {% endif %}

@@ -7,7 +7,6 @@
 
 require('./bootstrap');
 
-
 import LazyLoad from "vanilla-lazyload";
 import PhotoSwipe from 'photoswipe';
 import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default';
