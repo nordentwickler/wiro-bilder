@@ -1,0 +1,14 @@
+columnSuffix: cicuygqb
+contentColumnType: boolean
+fieldGroup: 939a2d54-9b3c-4e76-8353-32f820e7c737 # Common
+handle: allowDownload
+instructions: null
+name: 'Download erlauben'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

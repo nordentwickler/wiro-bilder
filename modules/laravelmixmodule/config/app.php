@@ -15,7 +15,7 @@
 return [
     'modules' => [
         'laravel-mix-module' => [
-            'class' => \modules\laravelmixmodule\LaravelmixModule::class,
+            'class' => \laravelmixmodule\SiteModule::class,
             'components' => [
                 'laravelmixModuleService' => [
                     'class' => 'modules\laravelmixmodule\services\LaravelmixModuleService',

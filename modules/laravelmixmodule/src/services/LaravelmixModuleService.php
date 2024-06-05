@@ -8,9 +8,7 @@
  * @copyright Copyright (c) 2018 Johannes Ahrndt
  */
 
-namespace modules\laravelmixmodule\services;
-
-use modules\laravelmixmodule\LaravelmixModule;
+namespace laravelmixmodule\services;
 
 use Craft;
 use craft\base\Component;
@@ -30,106 +28,106 @@ use craft\base\Component;
  */
 class LaravelmixModuleService extends Component
 {
-  /**
-   * Absolute path to the root directory.
-   *
-   * @var string
-   */
-  protected $rootPath;
+    /**
+     * Absolute path to the root directory.
+     *
+     * @var string
+     */
+    protected $rootPath;
 
-  /**
-   * Relative path to the public directory.
-   *
-   * @var string
-   */
-  protected $publicPath;
+    /**
+     * Relative path to the public directory.
+     *
+     * @var string
+     */
+    protected $publicPath;
 
-  /**
-   * Relative path to the asset directory.
-   *
-   * @var string
-   */
-  protected $assetPath;
+    /**
+     * Relative path to the asset directory.
+     *
+     * @var string
+     */
+    protected $assetPath;
 
-  /**
-   * Absolute path to the asset directory.
-   *
-   * @var string
-   */
-  protected $assetFullPath;
+    /**
+     * Absolute path to the asset directory.
+     *
+     * @var string
+     */
+    protected $assetFullPath;
 
-  /**
-   * Name of the manifest file.
-   *
-   * @var string
-   */
-  protected $manifestName = 'mix-manifest.json';
+    /**
+     * Name of the manifest file.
+     *
+     * @var string
+     */
+    protected $manifestName = 'mix-manifest.json';
 
-  /**
-   * Absolute path of the manifest file.
-   *
-   * @var string
-   */
-  protected $manifestPath;
+    /**
+     * Absolute path of the manifest file.
+     *
+     * @var string
+     */
+    protected $manifestPath;
 
-  /**
-   * @inheritdoc
-   */
-  public function init()
-  {
-    $this->rootPath = rtrim(CRAFT_BASE_PATH, '/');
-    $this->publicPath = trim('public', '/');
-    $this->assetPath = trim('', '/');
-    $this->assetFullPath = implode('/', array_filter([
-      $this->rootPath,
-      $this->publicPath,
-      $this->assetPath,
-    ]));
-    $this->manifestPath = implode('/', [
-      $this->rootPath,
-      $this->publicPath,
-      $this->manifestName
-    ]);
-  }
-  /**
-   * Find the files version.
-   *
-   * @param  string  $file
-   * @return string
-   */
-  public function version($file)
-  {
-    if (file_exists($this->assetFullPath . '/hot')) {
-      return '//localhost:8080/' . $file;
+    /**
+     * @inheritdoc
+     */
+    public function init(): void
+    {
+        $this->rootPath = rtrim(CRAFT_BASE_PATH, '/');
+        $this->publicPath = trim('public', '/');
+        $this->assetPath = trim('', '/');
+        $this->assetFullPath = implode('/', array_filter([
+            $this->rootPath,
+            $this->publicPath,
+            $this->assetPath,
+        ]));
+        $this->manifestPath = implode('/', [
+            $this->rootPath,
+            $this->publicPath,
+            $this->manifestName
+        ]);
     }
-    try {
-      $manifest = $this->readManifestFile();
-    } catch (Exception $e) {
-      Craft::info('Laravel Mix: ' . printf($e->getMessage()), __METHOD__);
+    /**
+     * Find the files version.
+     *
+     * @param  string  $file
+     * @return string
+     */
+    public function version($file): string
+    {
+        if (file_exists($this->assetFullPath . '/hot')) {
+            return '//localhost:8080/' . $file;
+        }
+        try {
+            $manifest = $this->readManifestFile();
+        } catch (Exception $e) {
+            Craft::info('Laravel Mix: ' . printf($e->getMessage()), __METHOD__);
+        }
+        $fileKey = '/' . ltrim($file, '/');
+        if (is_array($manifest) && isset($manifest[$fileKey])) {
+            $file = $manifest[$fileKey];
+        }
+        return '/' . implode('/', array_filter([
+                $this->assetPath,
+                ltrim($file, '/')
+            ]));
     }
-    $fileKey = '/' . ltrim($file, '/');
-    if (is_array($manifest) && isset($manifest[$fileKey])) {
-      $file = $manifest[$fileKey];
-    }
-    return '/' . implode('/', array_filter([
-        $this->assetPath,
-        ltrim($file, '/')
-      ]));
-  }
 
-  /**
-   * Locate manifest and convert to an array.
-   *
-   * @return array|bool
-   */
-  protected function readManifestFile()
-  {
-    if (file_exists($this->manifestPath)) {
-      return json_decode(
-        file_get_contents($this->manifestPath),
-        true
-      );
+    /**
+     * Locate manifest and convert to an array.
+     *
+     * @return array|bool
+     */
+    protected function readManifestFile(): bool|array
+    {
+        if (file_exists($this->manifestPath)) {
+            return json_decode(
+                file_get_contents($this->manifestPath),
+                true
+            );
+        }
+        return false;
     }
-    return false;
-  }
 }

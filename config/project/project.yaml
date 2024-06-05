@@ -1,0 +1,55 @@
+dateModified: 1716819996
+email:
+  fromEmail: brosch@webhub.de
+  fromName: wiro-bilder
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  images:
+    hasUrls: true
+    name: Bilder
+    settings:
+      path: '@webroot/images'
+    type: craft\fs\Local
+    url: '@web/images'
+  visuales:
+    hasUrls: true
+    name: Keyvisuales
+    settings:
+      path: '@webroot/visuales'
+    type: craft\fs\Local
+    url: '@web/visuales'
+meta:
+  __names__:
+    2ee94e50-17a6-455e-8d8b-5b5a0874e714: Bilder # Bilder
+    4afab6f7-60c2-46e9-8457-4bd6d536d1d6: Text # Text
+    6cb45d1b-95aa-466e-b450-eeca6d207e1f: wiro-bilder # wiro-bilder
+    11a33489-81b7-4623-9d2c-4a06045e0a66: Keyvisuales # Keyvisuales
+    54ca8698-f1ca-4e92-bb88-da59db94c132: 'Download erlauben' # Download erlauben
+    75df8235-794c-4ae6-8551-36c333903ab4: Startseite # Startseite
+    87ed2ad2-4673-45e6-a64d-7363197e1fdd: Keyvisual # Keyvisual
+    365e6f9b-d7e6-4842-9949-cbcb3f3add5c: Galeriebild # Galeriebild
+    535ca493-eede-4a95-abc7-46ece09cff7e: Galerien # Galerien
+    939a2d54-9b3c-4e76-8353-32f820e7c737: Common # Common
+    b3c8fa34-6148-455b-9606-0750a8a222e6: Bilder # Bilder
+    c2cf9d59-432b-4363-a4a5-8a304e6154bb: wiro-bilder # wiro-bilder
+    c6829d07-5faf-4e75-94fc-caf5c1df570b: Simple # Simple
+    ce188e1e-7a3a-4aff-a00f-cc1524a40c67: Standard # Standard
+    d2f0d8cf-cf3b-4666-807f-037fa2dbb84a: Startseite # Startseite
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+system:
+  edition: solo
+  live: true
+  name: wiro-bilder
+  schemaVersion: 4.5.3.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  deactivateByDefault: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

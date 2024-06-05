@@ -12,13 +12,17 @@
  * You can define custom modules and system components, and even override the
  * built-in system components.
  */
+
+use laravelmixmodule\LaravelmixModule;
+use laravelmixmodule\services\LaravelmixModuleService;
+
 return [
     'modules' => [
         'laravel-mix-module' => [
-            'class' => \modules\laravelmixmodule\LaravelmixModule::class,
+            'class' => LaravelmixModule::class,
             'components' => [
                 'laravelmixModuleService' => [
-                    'class' => 'modules\laravelmixmodule\services\LaravelmixModuleService',
+                    'class' => LaravelmixModuleService::class,
                 ],
             ],
         ],

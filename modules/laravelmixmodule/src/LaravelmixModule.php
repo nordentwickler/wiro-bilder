@@ -8,11 +8,11 @@
  * @copyright Copyright (c) 2018 Johannes Ahrndt
  */
 
-namespace modules\laravelmixmodule;
+namespace laravelmixmodule;
 
-use modules\laravelmixmodule\assetbundles\laravelmixmodule\LaravelmixModuleAsset;
-use modules\laravelmixmodule\services\LaravelmixModuleService as LaravelmixModuleServiceService;
-use modules\laravelmixmodule\twigextensions\LaravelmixModuleTwigExtension;
+use laravelmixmodule\assetbundles\laravelmixmodule\LaravelmixModuleAsset;
+use laravelmixmodule\services\LaravelmixModuleService;
+use laravelmixmodule\twigextensions\LaravelmixModuleTwigExtension;
 
 use Craft;
 use craft\events\RegisterTemplateRootsEvent;
@@ -38,7 +38,7 @@ use yii\base\Module;
  * @package   LaravelmixModule
  * @since     0.0.1
  *
- * @property  LaravelmixModuleServiceService $laravelmixModuleService
+ * @property  LaravelmixModuleService $laravelmixModuleService
  */
 class LaravelmixModule extends Module
 {
@@ -49,7 +49,7 @@ class LaravelmixModule extends Module
      * Static property that is an instance of this module class so that it can be accessed via
      * LaravelmixModule::$instance
      *
-     * @var LaravelmixModule
+     * @var SiteModule
      */
     public static $instance;
 
@@ -133,24 +133,24 @@ class LaravelmixModule extends Module
         // Add in our Twig extensions
         Craft::$app->view->registerTwigExtension(new LaravelmixModuleTwigExtension());
 
-/**
- * Logging in Craft involves using one of the following methods:
- *
- * Craft::trace(): record a message to trace how a piece of code runs. This is mainly for development use.
- * Craft::info(): record a message that conveys some useful information.
- * Craft::warning(): record a warning message that indicates something unexpected has happened.
- * Craft::error(): record a fatal error that should be investigated as soon as possible.
- *
- * Unless `devMode` is on, only Craft::warning() & Craft::error() will log to `craft/storage/logs/web.log`
- *
- * It's recommended that you pass in the magic constant `__METHOD__` as the second parameter, which sets
- * the category to the method (prefixed with the fully qualified class name) where the constant appears.
- *
- * To enable the Yii debug toolbar, go to your user account in the AdminCP and check the
- * [] Show the debug toolbar on the front end & [] Show the debug toolbar on the Control Panel
- *
- * http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html
- */
+        /**
+         * Logging in Craft involves using one of the following methods:
+         *
+         * Craft::trace(): record a message to trace how a piece of code runs. This is mainly for development use.
+         * Craft::info(): record a message that conveys some useful information.
+         * Craft::warning(): record a warning message that indicates something unexpected has happened.
+         * Craft::error(): record a fatal error that should be investigated as soon as possible.
+         *
+         * Unless `devMode` is on, only Craft::warning() & Craft::error() will log to `craft/storage/logs/web.log`
+         *
+         * It's recommended that you pass in the magic constant `__METHOD__` as the second parameter, which sets
+         * the category to the method (prefixed with the fully qualified class name) where the constant appears.
+         *
+         * To enable the Yii debug toolbar, go to your user account in the AdminCP and check the
+         * [] Show the debug toolbar on the front end & [] Show the debug toolbar on the Control Panel
+         *
+         * http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html
+         */
         Craft::info(
             Craft::t(
                 'laravel-mix-module',

@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2018 Johannes Ahrndt
  */
 
-namespace modules\laravelmixmodule\assetbundles\LaravelmixModule;
+namespace laravelmixmodule\assetbundles\laravelmixmodule;
 
 use Craft;
 use craft\web\AssetBundle;

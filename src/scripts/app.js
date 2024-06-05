@@ -7,8 +7,7 @@
 
 require('./bootstrap');
 
-import Vue from 'vue';
-import ExampleComponent from './components/ExampleComponent';
+
 import LazyLoad from "vanilla-lazyload";
 import PhotoSwipe from 'photoswipe';
 import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default';
@@ -18,12 +17,6 @@ import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default';
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-const app = new Vue({
-  el: '#app',
-  components: {
-    ExampleComponent
-  }
-});
 
 var lazyLoadInstance = new LazyLoad({
   elements_selector: ".lazy"

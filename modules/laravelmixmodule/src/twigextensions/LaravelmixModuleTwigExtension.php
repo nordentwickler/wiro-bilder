@@ -8,9 +8,9 @@
  * @copyright Copyright (c) 2018 Johannes Ahrndt
  */
 
-namespace modules\laravelmixmodule\twigextensions;
+namespace laravelmixmodule\twigextensions;
 
-use modules\laravelmixmodule\LaravelmixModule;
+use laravelmixmodule\LaravelmixModule;
 
 use Craft;
 
@@ -25,7 +25,7 @@ use Craft;
  * @package   LaravelmixModule
  * @since     0.0.1
  */
-class LaravelmixModuleTwigExtension extends \Twig_Extension
+class LaravelmixModuleTwigExtension extends \Twig\Extension\AbstractExtension
 {
     // Public Methods
     // =========================================================================
@@ -50,7 +50,7 @@ class LaravelmixModuleTwigExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('mix', [$this, 'mix']),
+            new \Twig\TwigFilter('mix', [$this, 'mix']),
         ];
     }
 
@@ -59,12 +59,12 @@ class LaravelmixModuleTwigExtension extends \Twig_Extension
      *
      *      {% set this = someFunction('something') %}
      *
-    * @return array
+     * @return array
      */
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('mix', [$this, 'mix']),
+            new \Twig\TwigFunction('mix', [$this, 'mix']),
         ];
     }
 
@@ -82,15 +82,15 @@ class LaravelmixModuleTwigExtension extends \Twig_Extension
         return $result;
     }
 
-  /**
-   * Returns versioned file or the entire tag.
-   *
-   * @param  string $file
-   * @return string
-   */
+    /**
+     * Returns versioned file or the entire tag.
+     *
+     * @param  string $file
+     * @return string
+     */
     public function mix($file)
     {
-      return LaravelmixModule::$instance->laravelmixModuleService->version($file);
+        return LaravelmixModule::$instance->laravelmixModuleService->version($file);
 
     }
 }

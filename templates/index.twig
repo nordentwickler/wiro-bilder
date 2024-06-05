@@ -1,58 +1,89 @@
-{### Extends #}
+{# ## Extends #}
 {% extends '_layouts/master' %}
 
-{### Permissions #}
+{# ## Permissions #}
 
-{### Macros #}
+{# ## Macros #}
 
-{### Data logic #}
+{# ## Data logic #}
 
 {% set smallKeyvisual = {
     mode: 'crop',
     width: 640
 } %}
 
+{% set galleryThumb = {
+    mode: 'crop',
+    width: 1024,
+    height: 682,
+    quality: 90,
+    format: 'jpg',
+    position: 'center-center'
+} %}
 
 
-{### Blocks #}
+{% set placeholder = {
+    mode: 'crop',
+    width: 1024,
+    height: 682,
+    quality: 1,
+    format: 'jpg',
+    position: 'center-center'
+} %}
+
+
+{# ## Blocks #}
 {% block content %}
 
-    <section class="p-4 bg-white z-30 relative">
+    <section class="p-4 bg-bg-white z-30 relative">
         <div class="container mx-auto">
 
             {% if entry.keyvisual|length %}
-                <figure class="mb-2 mx-auto max-w-2xl px-4">
+                <figure class="mb-2 mx-auto max-w-6xl">
                     <img
                             data-src="{{ entry.keyvisual.one.getUrl(smallKeyvisual) }}"
                             data-srcset="{{ entry.keyvisual.one.getUrl }} 641w"
-                            class="lazy w-full h-auto z-10"/>
+                            class="lazy w-full h-auto z-10" alt=""/>
 
                 </figure>
             {% endif %}
 
-
-            <div class="text-center max-w-3xl mx-auto mt-6 px-4">
-                <div class="mb-8">
+            <div class="text-left max-w-3xl mx-auto mb-12 md:mb-24 mt-6">
+                <div class="mb-8 text-xl">
                     {% if entry.text %}
                         {{ entry.text }}
                     {% endif %}
                 </div>
+            </div>
 
+            <div class="w-full flex max-w-3xl mx-auto">
+
+                <ul class="grid grid-cols-1 w-full gap-y-12">
+
+                    {% for gallery in craft.entries.section("galleries").all() %}
+                        <li>
+                            <a href="{{ gallery.url }}" class="block hover:text-wiro-red group relative">
+                                <div class="relative">
+                                    <img data-src="{{ gallery.galleryImage.one().getUrl(galleryThumb) }}"
+                                         src="{{ gallery.galleryImage.one().getUrl(placeholder) }}" class="lazy block"
+                                         itemprop="thumbnail" alt="{{ gallery.galleryImage.one().title }}"/>
+                                    <span class="hidden group-hover:inline-flex absolute bg-wiro-red bg-opacity-50  top-0 bottom-0 left-0 right-0 items-center justify-center"><span class="text-white text-md font-bold">Galerie öffnen</span></span>
+                                </div>
+                                <div class="mt-4">
+                                    <span class="text-2xl mb-1 block">{{ gallery.title }}</span>
+                                </div>
+                            </a>
+                        </li>
+                    {% endfor %}
+
+                </ul>
             </div>
 
         </div>
     </section>
 
-    <div class="fixed bottom-0 z-50 left-0 right-0 w-full bg-gray-100 border-t border-gray-300">
-        <div class="p-4 w-full shadow-xl">
-
-
-            <div class="container mx-auto">
-                <div class="flex justify-end">
-                    <a href="/galerie" class="btn text-xl">Zur Bildergalerie</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <section>
+        <div class="container"></div>
+    </section>
 
 {% endblock %}
