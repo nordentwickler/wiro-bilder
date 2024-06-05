@@ -9,4 +9,7 @@ siteSettings:
     hasUrls: true
     template: _gallery/index.twig
     uriFormat: 'galerien/{slug}'
-type: channel
+structure:
+  maxLevels: 1
+  uid: 85a802c1-1855-4177-8bcf-c9a6b9c5c671
+type: structure
