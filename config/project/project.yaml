@@ -1,4 +1,4 @@
-dateModified: 1717582498
+dateModified: 1717591247
 email:
   fromEmail: brosch@webhub.de
   fromName: wiro-bilder
@@ -22,7 +22,7 @@ meta:
   __names__:
     2ee94e50-17a6-455e-8d8b-5b5a0874e714: Bilder # Bilder
     4afab6f7-60c2-46e9-8457-4bd6d536d1d6: Text # Text
-    6cb45d1b-95aa-466e-b450-eeca6d207e1f: wiro-bilder # wiro-bilder
+    6cb45d1b-95aa-466e-b450-eeca6d207e1f: 'WIRO Intercup 2024' # WIRO Intercup 2024
     11a33489-81b7-4623-9d2c-4a06045e0a66: Keyvisuales # Keyvisuales
     54ca8698-f1ca-4e92-bb88-da59db94c132: 'Download erlauben' # Download erlauben
     75df8235-794c-4ae6-8551-36c333903ab4: Startseite # Startseite
@@ -30,6 +30,7 @@ meta:
     365e6f9b-d7e6-4842-9949-cbcb3f3add5c: Galeriebild # Galeriebild
     535ca493-eede-4a95-abc7-46ece09cff7e: Galerien # Galerien
     939a2d54-9b3c-4e76-8353-32f820e7c737: Common # Common
+    91089a32-9653-4514-98e8-030bfdcfc062: SEO # SEO
     b3c8fa34-6148-455b-9606-0750a8a222e6: Bilder # Bilder
     c2cf9d59-432b-4363-a4a5-8a304e6154bb: wiro-bilder # wiro-bilder
     c6829d07-5faf-4e75-94fc-caf5c1df570b: Simple # Simple
@@ -41,10 +42,15 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
 system:
   edition: solo
   live: true
-  name: wiro-bilder
+  name: 'WIRO Intercup 2024'
+  retryDuration: null
   schemaVersion: 4.5.3.0
   timeZone: America/Los_Angeles
 users:

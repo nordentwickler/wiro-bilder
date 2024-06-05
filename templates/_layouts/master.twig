@@ -21,8 +21,10 @@
         {% header "Pragma: cache" %}
     {% endif %}
 
+    {% hook "seo" %}
+
     {# Get Ya Style On! #}
-    <link rel="stylesheet" href="{{ '/assets/css/app.css?id=f7f1fa14accef910f88b'|mix }}">
+    <link rel="stylesheet" href="{{ '/assets/css/app.css'|mix }}">
 
     <link rel="home" href="{{ siteUrl }}"/>
 
@@ -57,9 +59,9 @@
 {% include "_inline-scripts/_craft-csrf-token" %}
 
 {# Application script #}
-<script src="/assets/js/manifest.js?id=40dcfff9d09d402daf38"></script>
-<script src="/assets/js/vendor.js?id=31f9ca3f1f1a3617d052"></script>
-<script async defer src="/assets/js/app.js?id=5bd45ba9e9b8b4ce7a35"></script>
+<script src="{{ '/assets/js/manifest.js'|mix }}"></script>
+<script src="{{ '/assets/js/vendor.js'|mix }}"></script>
+<script async defer src="{{ '/assets/js/app.js'|mix }}"></script>
 
 {# Cookie Warning #}
 {% include "_partials/_cookie-warning" ignore missing %}

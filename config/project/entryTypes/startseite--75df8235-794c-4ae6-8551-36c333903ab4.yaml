@@ -55,6 +55,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 91089a32-9653-4514-98e8-030bfdcfc062 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: be0b921f-5a22-4e7d-8d1a-4fb057c2547f
+            userCondition: null
+            warning: null
+            width: 100
         name: Inhalt
         uid: 23f6548c-bcf0-471f-88b8-cccf10399a09
         userCondition: null

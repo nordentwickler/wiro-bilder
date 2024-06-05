@@ -4,7 +4,7 @@ handle: galleries
 name: Galerien
 propagationMethod: all
 siteSettings:
-  6cb45d1b-95aa-466e-b450-eeca6d207e1f: # wiro-bilder
+  6cb45d1b-95aa-466e-b450-eeca6d207e1f: # WIRO Intercup 2024
     enabledByDefault: true
     hasUrls: true
     template: _gallery/index.twig

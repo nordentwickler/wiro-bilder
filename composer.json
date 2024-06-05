@@ -2,6 +2,7 @@
   "require": {
     "craftcms/ckeditor": "3.8.3",
     "craftcms/cms": "^4.0.0",
+    "ether/seo": "4.2.2",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "autoload": {

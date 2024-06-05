@@ -82,6 +82,24 @@ fieldLayouts:
         name: Inhalt
         uid: dd50bb2f-55dc-4af4-939e-c143eca5c074
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 91089a32-9653-4514-98e8-030bfdcfc062 # SEO
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 72cee915-4fbb-4d46-a1b2-fedd07995ae8
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 33ef616b-7365-4827-a2ca-67429b0a9616
+        userCondition: null
 handle: default
 hasTitleField: true
 name: Standard

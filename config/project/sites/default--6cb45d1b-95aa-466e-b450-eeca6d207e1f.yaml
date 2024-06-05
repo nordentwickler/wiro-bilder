@@ -1,8 +1,9 @@
 baseUrl: $PRIMARY_SITE_URL
+enabled: true
 handle: default
 hasUrls: true
 language: de-DE
-name: wiro-bilder
+name: 'WIRO Intercup 2024'
 primary: true
 siteGroup: c2cf9d59-432b-4363-a4a5-8a304e6154bb # wiro-bilder
 sortOrder: 1
