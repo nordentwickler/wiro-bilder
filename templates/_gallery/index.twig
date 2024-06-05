@@ -3,7 +3,9 @@
 
 {% block content %}
 
-    {% set allImages = entry.images.limit(48) %}
+    {% set imagesPerPage = entry.imagesPerPage ?? 48 %}
+
+    {% set allImages = entry.images.limit(imagesPerPage) %}
     {% set allowDownload = entry.allowDownload %}
 
     <section class="p-4 bg-white z-30 relative" id="gallery">

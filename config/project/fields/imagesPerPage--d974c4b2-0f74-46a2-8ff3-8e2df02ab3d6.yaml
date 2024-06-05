@@ -1,0 +1,20 @@
+columnSuffix: rngfzbbw
+contentColumnType: integer(10)
+fieldGroup: 939a2d54-9b3c-4e76-8353-32f820e7c737 # Common
+handle: imagesPerPage
+instructions: null
+name: 'Bilder pro Seite'
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: 48
+  max: null
+  min: 0
+  prefix: null
+  previewCurrency: null
+  previewFormat: decimal
+  size: null
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number
