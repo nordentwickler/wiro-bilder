@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b258d999330f7283f4ca1f0394e653f5",
+    "content-hash": "d053d21ad2c82a527a89187c066a6236",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1282,11 +1282,11 @@
         },
         {
             "name": "ether/seo",
-            "version": "4.2.2",
+            "version": "4.2.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ethercreative/seo/zipball/e501bd820efed88afdac1aedeac733778821e0d3",
-                "reference": "e501bd820efed88afdac1aedeac733778821e0d3",
+                "url": "https://api.github.com/repos/ethercreative/seo/zipball/f0cf94795f1971508cfe03a82863a4731507a951",
+                "reference": "f0cf94795f1971508cfe03a82863a4731507a951",
                 "shasum": ""
             },
             "require": {
@@ -1314,7 +1314,7 @@
                 "issues": "https://github.com/ethercreative/seo",
                 "docs": "https://github.com/ethercreative/seo/blob/v3/README.md"
             },
-            "time": "2024-02-16T10:16:16+00:00"
+            "time": "2024-10-09T10:51:26+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
