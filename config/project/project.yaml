@@ -1,4 +1,4 @@
-dateModified: 1717593843
+dateModified: 1750058934
 email:
   fromEmail: brosch@webhub.de
   fromName: wiro-bilder
@@ -49,9 +49,9 @@ plugins:
 system:
   edition: solo
   live: true
-  name: 'WIRO Intercup 2024'
+  name: 'WIRO Intercup 2025'
   retryDuration: null
-  schemaVersion: 4.5.3.0
+  schemaVersion: 4.15.0.0
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
