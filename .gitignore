@@ -37,6 +37,7 @@ public/mix-manifest.json
 public/.htaccess
 public/uploads/**/*
 public/cpresources/
+public/images/**/*
 
 # BUILD FILES
 /bower_components/*
