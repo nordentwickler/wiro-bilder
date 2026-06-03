@@ -1,4 +1,4 @@
-dateModified: 1750059996
+dateModified: 1780479027
 email:
   fromEmail: brosch@webhub.de
   fromName: wiro-bilder
@@ -28,6 +28,7 @@ meta:
     75df8235-794c-4ae6-8551-36c333903ab4: Startseite # Startseite
     87ed2ad2-4673-45e6-a64d-7363197e1fdd: Keyvisual # Keyvisual
     365e6f9b-d7e6-4842-9949-cbcb3f3add5c: Galeriebild # Galeriebild
+    522ab2a7-e86f-48ba-9362-d0abdca04784: 'Public Schema' # Public Schema
     535ca493-eede-4a95-abc7-46ece09cff7e: Galerien # Galerien
     939a2d54-9b3c-4e76-8353-32f820e7c737: Common # Common
     91089a32-9653-4514-98e8-030bfdcfc062: SEO # SEO
@@ -51,7 +52,7 @@ system:
   live: true
   name: 'WIRO Intercup 2025'
   retryDuration: null
-  schemaVersion: 4.15.0.0
+  schemaVersion: 4.17.0.3
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
